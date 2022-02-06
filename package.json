@@ -1,0 +1,23 @@
+{
+  "name": "assessment1-christinejoytorres",
+  "version": "1.0.0",
+  "description": "Assessment 1 - DMIT 2008 by Christine Torres",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/christinetorres1/assessment1-dmit2008.git"
+  },
+  "author": "Christine Torres",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/christinetorres1/assessment1-dmit2008/issues"
+  },
+  "homepage": "https://github.com/christinetorres1/assessment1-dmit2008#readme",
+  "dependencies": {
+    "firebase": "^9.6.6",
+    "parcel": "^2.2.1"
+  }
+}
