@@ -1,0 +1,39 @@
+.dashboard{
+    display:flex;
+    flex-wrap:wrap;
+    background-color: rgb(223, 223, 223);;
+}
+
+.sidebar{
+    width:289px;
+    height: calc(100vh - 64px);
+    background-color: white;
+    box-shadow: 2px 0 2px 1px grey;
+}
+
+.app-bar{
+    width:100%;
+    position: relative;
+    box-shadow: 0 0 2px 1px grey;
+    background-color: white;
+    padding:1rem;
+    ul{
+        display:flex;
+        justify-content: space-between;
+    }
+    min-height: 64px;
+}
+
+.options{
+    display:flex;
+    gap:1rem;
+}
+
+.widget{
+    width: calc(100% - calc(289px + 4rem));
+    height: calc(100vh - calc(64px + 4rem));
+    margin: 2rem;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 0 2px 1px grey;
+}
