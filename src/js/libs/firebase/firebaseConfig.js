@@ -11,6 +11,7 @@ import {getStorage} from "firebase/storage";
 const firebaseConfig = {
   apiKey: "AIzaSyAIbHRkz3KA2UGcOCWzJCfbd1ZBefHuGss",
   authDomain: "chocolatestore-f86cb.firebaseapp.com",
+  databaseURL: "https://chocolatestore-f86cb-default-rtdb.firebaseio.com",
   projectId: "chocolatestore-f86cb",
   storageBucket: "chocolatestore-f86cb.appspot.com",
   messagingSenderId: "348373430667",

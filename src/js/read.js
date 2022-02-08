@@ -5,12 +5,17 @@ import {card} from './templates/card'
 async function pageInit() {
     const chocolateRef = dataRef(db, 'chocolates/');
     const chocolateSnapShot = await get(chocolateRef)
-    const chocolateData = { ...chocolateSnapShot.val()}
-    const chocolates = Object.keys(chocolateData).map(chocolate => {
-        return chocolateData[chocolate]
+    const chocolateData = chocolateSnapShot.val();
+
+    const chocolateCards = Object.values(chocolateData).map(chocolate => {
+        const chocolateCard = card(chocolate)
+        
+        document.body.append(chocolateCard)
+
+        return chocolateCard 
     })
 
-    console.log(chocolates)
+   
 }
 
 pageInit()
