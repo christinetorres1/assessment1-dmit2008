@@ -1,11 +1,15 @@
-function card ({key, name, urlPath}){
+
+
+function card ({key, name, price, pieces, urlPath}){
     const template = `
         
-    <aside class="vacation-rentals">
+    <aside class="chocolate-menu">
   
     <figure>
     <img src="${urlPath}" width="160" alt="chocolate">
         <figcaption> <h2>${name}</h2></figcaption>
+        <figcaption> <h2>${price}</h2></figcaption>
+        <figcaption> <h2>${pieces}</h2></figcaption>
     </figure>
   
     <footer>
@@ -21,12 +25,12 @@ function card ({key, name, urlPath}){
   }
   
   function addCardControls(chocolate){
-    chocolate.querySelector('#edit').addEventListener('click', onEditRental)
-    chocolate.querySelector('#delete').addEventListener('click', onRemoveRental)
+    chocolate.querySelector('#edit').addEventListener('click', onEditChocolate)
+    chocolate.querySelector('#delete').addEventListener('click', onRemoveChocolate)
   }
   
   
-  function onEditRental(e){
+  function onEditChocolate(e){
       const key = e.target.dataset.key 
       sessionStorage.setItem('key', key)
       window.location.assign('update.html')
@@ -37,4 +41,5 @@ function card ({key, name, urlPath}){
       sessionStorage.setItem('key', key)
       window.location.assign('delete.html')
   }
+
   export {card}
