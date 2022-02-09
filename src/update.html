@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chocolate Store - Write</title>    
+    <link rel="stylesheet" href="css/styles.css">
+    <script type="module" src="js/update.js" defer  ></script>
+</head>
+<body>
+
+    <main class="dashboard">
+        <nav class="app-bar">
+               <ul>
+                   <li>Chocolate Store - Update</li>
+                   <li></li>
+                   <li class="options">
+                        <span><a href="write.html" class="write">Write</a></span>
+                        <span><a href="index.html" class="read">Read</a></span>
+                        <span><a href="delete.html" class="delete">Delete</a></span>
+                        <span><a href="update.html" class="update">Update</a></span>
+                 </li>
+               </ul>
+        </nav>
+  
+        <aside class="sidebar">
+            
+        </aside>
+
+        <aside class="widget">
+
+            <form id="chocolateForm" class="add-new-chocolate">
+       
+                <div class="chocolate-image form-control">
+                  <div class="display">
+                    <div>
+                      <img src="static/images/default.jpg" alt="upload chocolate image">
+                    </div>
+                       
+                    <label for="chocolateImage">Select image</label>
+                    <input type="file" id="chocolateImage" style="display:none"  class="select-file"   accept=".jpg, .png, .jpeg, .webp">
+                  </div>
+        
+                <div class="chocolate-name form-control">
+                  <label for="chocolateName">chocolate name</label>
+                   <input id="chocolateName" type="text" placeholder="name" >
+                </div>
+
+                <div class="chocolate-price form-control">
+                    <label for="chocolatePrice">chocolate price</label>
+                     <input id="chocolatePrice" type="text" placeholder="price" >
+                </div>
+
+                <div class="chocolate-pieces form-control">
+                    <label for="chocolatePieces">Number of Pieces</label>
+                    <input id="chocolatePieces" type="text" placeholder="pieces" >
+                </div>
+                
+                <div class="submit-button form-control">
+                    <button type="submit">Add Chocolate</button>
+                </div>
+
+              </form>
+
+        </aside>
+
+    </main>
+    
+</body>
+</html>
