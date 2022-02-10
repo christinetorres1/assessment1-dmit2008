@@ -4,7 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Chocolate Store - Write</title>    
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/styles.css">
     <script type="module" src="js/write.js" defer  ></script>
 </head>
@@ -13,11 +20,11 @@
     <main class="dashboard">
         <nav class="app-bar">
                <ul>
-                   <li>Chocolate Store - Add</li>
+                   <li class="title">Chocolate Store | Add Product</li>
                    <li></li>
                    <li class="options">
-                      <span><a href="write.html" class="write">Write</a></span>
-                      <span><a href="index.html" class="read">Read</a></span>
+                    <span><a href="write.html" class="write">Add Product</a></span>
+                    <span><a href="index.html" class="read">Home</a></span>
                       <span><a href="delete.html" class="delete">Delete</a></span>
                       <span><a href="update.html" class="update">Update</a></span>
                  </li>
@@ -25,7 +32,12 @@
         </nav>
   
         <aside class="sidebar">
-            
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Locations</a></li>
+          </ul>
+        
         </aside>
 
         <aside class="widget">
@@ -38,23 +50,23 @@
                       <img src="static/images/default.jpg" alt="upload chocolate image">
                     </div>
                        
-                    <label for="chocolateImage">Select image</label>
+                    <label class="chocolateImage" for="chocolateImage">Select image</label>
                     <input type="file" id="chocolateImage" style="display:none"  class="select-file"   accept=".jpg, .png, .jpeg, .webp">
                   </div>
         
                 <div class="chocolate-name form-control">
-                  <label for="chocolateName">chocolate name</label>
-                   <input id="chocolateName" type="text" placeholder="name" >
+                  <label for="chocolateName">Chocolate Name: </label>
+                   <input id="chocolateName" type="text" placeholder="Name" >
                 </div>
 
                 <div class="chocolate-price form-control">
-                    <label for="chocolatePrice">chocolate price</label>
-                     <input id="chocolatePrice" type="text" placeholder="price" >
+                    <label for="chocolatePrice">Chocolate Price:</label>
+                     <input id="chocolatePrice" type="money" placeholder="Price (eg. $0.00)" >
                 </div>
 
                 <div class="chocolate-pieces form-control">
-                    <label for="chocolatePieces">Number of Pieces</label>
-                    <input id="chocolatePieces" type="text" placeholder="pieces" >
+                    <label for="chocolatePieces">Number of Pieces: </label>
+                    <input id="chocolatePieces" type="number" placeholder="1" >
                 </div>
                 
                 <div class="submit-button form-control">

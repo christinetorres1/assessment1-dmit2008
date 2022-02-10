@@ -8,13 +8,13 @@ function card ({key, name, price, pieces, urlPath}){
     <figure>
     <img src="${urlPath}" width="160" alt="chocolate">
         <figcaption> <h2>${name}</h2></figcaption>
-        <figcaption> <h2>${price}</h2></figcaption>
-        <figcaption> <h2>${pieces}</h2></figcaption>
+        <figcaption> <h2>Price: ${price}</h2></figcaption>
+        <figcaption> <h2>Piece(s): ${pieces}</h2></figcaption>
     </figure>
   
     <footer>
-        <button id="edit" data-key="${key}" >edit</button>
-        <button id="delete" data-key="${key}" >delete</button>
+        <button id="edit" data-key="${key}" >Edit</button>
+        <button id="delete" data-key="${key}" >Delete</button>
     </footer>
   
   </aside>
