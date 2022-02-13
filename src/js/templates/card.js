@@ -3,7 +3,7 @@
 function card ({key, name, price, pieces, urlPath}){
     const template = `
         
-    <aside class="chocolate-menu">
+    <aside class="chocolate-menu" id="chocolateCard${key}">
   
     <figure>
     <img src="${urlPath}" width="160" alt="chocolate">
@@ -14,7 +14,7 @@ function card ({key, name, price, pieces, urlPath}){
   
     <footer>
         <button id="edit" data-key="${key}" >Edit</button>
-        <button id="delete" data-key="${key}" >Delete</button>
+        <button class="btn-delete" id="delete" data-key="${key}" >Delete</button>
     </footer>
   
   </aside>
@@ -39,7 +39,7 @@ function card ({key, name, price, pieces, urlPath}){
   function onRemoveChocolate(e){
       const key = e.target.dataset.key 
       sessionStorage.setItem('key', key)
-      window.location.assign('delete.html')
+     
   }
 
   export {card}
