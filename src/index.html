@@ -24,7 +24,6 @@
                    <li class="options">
                     <span><a href="write.html" class="write">Add Product</a></span>
                     <span><a href="index.html" class="read">Home</a></span>
-                       <span><a href="delete.html" class="delete">Delete</a></span>
                        <span><a href="update.html" class="update">Update</a></span>
                     </li>
                </ul>
@@ -80,7 +79,58 @@
                     background-color: brown;
                     color: white;
                 }
+
+                .confirm-delete-overlay {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    z-index: 99;
+                    background-color: rgba(79, 71, 75, 0.7);
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+
+                }
+
+                .confirm-delete-modal {
+                    width: calc(100%-2rem);
+                    margin: 0 auto;
+                    background-color: #fff;
+                    text-align: center;
+                    border: 10px;
+                    padding: 1rem;
+                }
+
+                .modal-title {
+                    font-weight: bold;
+                    font-size: 1.2rem;
+                    margin: 1rem;
+
+                }
+
+                .btn-delete-confirm,
+                .btn-delete-cancel {
+                    display: inline-block;
+                    width: 5rem;
+                    font-size: 1rem;
+                }
+
+                .btn-delete-confirm {
+                    margin-right: 1rem;
+                }
+
+                .hidden {
+                    display: none;
+                }
             </style>
+            <section class="confirm-delete-overlay hidden">
+                <section class="confirm-delete-modal">
+                    <h2 class="modal-title">Confirm Delete</h2>
+                    <p class="modal-description">Please confirm that you want to delete the chocolate</p>
+                    <button class="btn-delete-confirm">Confirm</button>
+                    <button class="btn-delete-cancel">Cancel</button>
+                </section>
+            </section>
         </aside>
 
     </main>

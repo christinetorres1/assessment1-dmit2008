@@ -1,15 +1,20 @@
-import {ref as dataRef, get, set, update, remove} from 'firebase/database';
+import {ref as dataRef, get, remove} from 'firebase/database';
 import {ref as storageRef, deleteObject} from "firebase/database";
-import {db} from './libs/firebase/firebaseConfig';
+import {db, storage} from './libs/firebase/firebaseConfig';
 import {card} from './templates/card';
+
+
+
 
 pageInit()
 
 
-
-
-
 async function pageInit() {
+
+    document.querySelector(".btn-delete-confirm").addEventListener("click", deleteChocolate);
+    document.querySelector(".btn-delete-cancel").addEventListener("click", onCancel)
+
+
     const chocolateRef = dataRef(db, 'chocolates/');
     const chocolateSnapShot = await get(chocolateRef);
     const chocolateData = chocolateSnapShot.val();
@@ -28,20 +33,23 @@ async function pageInit() {
 
 
 
-
 async function deleteChocolate(e) {
-    
-    document.querySelector(".btn-delete").addEventListener("click", deleteChocolate)
     
     const key = sessionStorage.getItem("key");
 
     const chocolateRef = dataRef(db, `chocolates/${key}`);
     const chocolateSnapShot = await get(chocolateRef);
 
+
+    // console.log(chocolateRef);
+
     if (chocolateSnapShot.exists()) {
         const chocolateInfo = chocolateSnapShot.val();
 
         const chocolateImgRef = storageRef(storage, chocolateInfo.storagePath);
+        
+        // console.log(chocolateImgRef)
+        
         deleteObject(chocolateImgRef)
 
             .then(() => {
@@ -54,9 +62,16 @@ async function deleteChocolate(e) {
 
                     sessionStorage.removeItem("key");
 
-                
+                    e.target.closest(".confirm-delete-overlay").classList.add("hidden");
                 });
             
             });
     }
+}
+
+
+function onCancel (e) {
+    sessionStorage.removeItem("key");
+
+    e.target.closest(".confirm-delete-overlay").classList.add("hidden");
 }
