@@ -1,5 +1,5 @@
 import {ref as dataRef, get, remove} from 'firebase/database';
-import {ref as storageRef, deleteObject} from "firebase/database";
+import {ref as storageRef} from "firebase/database";
 import {db, storage} from './libs/firebase/firebaseConfig';
 import {card} from './templates/card';
 
